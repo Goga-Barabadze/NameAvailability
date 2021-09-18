@@ -1,6 +1,6 @@
 #  TODO List
 
-- [] Twitter
-- [] Facebook
-- [] YouTube
-- [] .COM
+- [ ] Twitter
+- [ ] Facebook
+- [ ] YouTube
+- [ ] .COM
