@@ -3,18 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		4A67064226F65762003773EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A67064126F65762003773EC /* AppDelegate.swift */; };
 		4A67064426F65762003773EC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A67064326F65762003773EC /* SceneDelegate.swift */; };
-		4A67064626F65762003773EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A67064526F65762003773EC /* ViewController.swift */; };
+		4A67064626F65762003773EC /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A67064526F65762003773EC /* MainVC.swift */; };
 		4A67064926F65762003773EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A67064726F65762003773EC /* Main.storyboard */; };
 		4A67064B26F65765003773EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A67064A26F65765003773EC /* Assets.xcassets */; };
 		4A67064E26F65765003773EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A67064C26F65765003773EC /* LaunchScreen.storyboard */; };
 		4A67065926F65765003773EC /* NameAvailabilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A67065826F65765003773EC /* NameAvailabilityTests.swift */; };
 		4A67066426F65765003773EC /* NameAvailabilityUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A67066326F65765003773EC /* NameAvailabilityUITests.swift */; };
+		4A67067926F65A32003773EC /* SwiftNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = 4A67067826F65A32003773EC /* SwiftNetworking */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +39,7 @@
 		4A67063E26F65762003773EC /* NameAvailability.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NameAvailability.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A67064126F65762003773EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A67064326F65762003773EC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4A67064526F65762003773EC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4A67064526F65762003773EC /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		4A67064826F65762003773EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4A67064A26F65765003773EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A67064D26F65765003773EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +50,7 @@
 		4A67065F26F65765003773EC /* NameAvailabilityUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NameAvailabilityUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A67066326F65765003773EC /* NameAvailabilityUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameAvailabilityUITests.swift; sourceTree = "<group>"; };
 		4A67066526F65765003773EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A67067A26F65A8E003773EC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A67067926F65A32003773EC /* SwiftNetworking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,11 +104,14 @@
 			children = (
 				4A67064126F65762003773EC /* AppDelegate.swift */,
 				4A67064326F65762003773EC /* SceneDelegate.swift */,
-				4A67064526F65762003773EC /* ViewController.swift */,
-				4A67064726F65762003773EC /* Main.storyboard */,
+				4A67067426F658B2003773EC /* Model */,
+				4A67067626F658E2003773EC /* Storyboard */,
+				4A67067226F65853003773EC /* Controller */,
+				4A67067526F658C4003773EC /* Networking */,
+				4A67067326F6585A003773EC /* Support Files */,
 				4A67064A26F65765003773EC /* Assets.xcassets */,
-				4A67064C26F65765003773EC /* LaunchScreen.storyboard */,
 				4A67064F26F65765003773EC /* Info.plist */,
+				4A67067A26F65A8E003773EC /* README.md */,
 			);
 			path = NameAvailability;
 			sourceTree = "<group>";
@@ -128,6 +134,44 @@
 			path = NameAvailabilityUITests;
 			sourceTree = "<group>";
 		};
+		4A67067226F65853003773EC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4A67064526F65762003773EC /* MainVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4A67067326F6585A003773EC /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		4A67067426F658B2003773EC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4A67067526F658C4003773EC /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		4A67067626F658E2003773EC /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				4A67064726F65762003773EC /* Main.storyboard */,
+				4A67064C26F65765003773EC /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,6 +188,9 @@
 			dependencies = (
 			);
 			name = NameAvailability;
+			packageProductDependencies = (
+				4A67067826F65A32003773EC /* SwiftNetworking */,
+			);
 			productName = NameAvailability;
 			productReference = 4A67063E26F65762003773EC /* NameAvailability.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +262,9 @@
 				Base,
 			);
 			mainGroup = 4A67063526F65762003773EC;
+			packageReferences = (
+				4A67067726F65A32003773EC /* XCRemoteSwiftPackageReference "SwiftNetworking" */,
+			);
 			productRefGroup = 4A67063F26F65762003773EC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -258,7 +308,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A67064626F65762003773EC /* ViewController.swift in Sources */,
+				4A67064626F65762003773EC /* MainVC.swift in Sources */,
 				4A67064226F65762003773EC /* AppDelegate.swift in Sources */,
 				4A67064426F65762003773EC /* SceneDelegate.swift in Sources */,
 			);
@@ -593,6 +643,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4A67067726F65A32003773EC /* XCRemoteSwiftPackageReference "SwiftNetworking" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Goga-Barabadze/SwiftNetworking.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4A67067826F65A32003773EC /* SwiftNetworking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4A67067726F65A32003773EC /* XCRemoteSwiftPackageReference "SwiftNetworking" */;
+			productName = SwiftNetworking;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4A67063626F65762003773EC /* Project object */;
 }
